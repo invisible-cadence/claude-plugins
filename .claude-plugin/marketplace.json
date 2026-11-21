@@ -1,0 +1,12 @@
+{
+  "name": "invisible-cadence",
+  "owner": { "name": "Invisible Cadence" },
+  "description": "Claude Code plugins shared across Invisible Cadence projects.",
+  "plugins": [
+    {
+      "name": "review",
+      "source": "./plugins/review",
+      "description": "Whole-project reviews of code quality and of documentation, checked against each project's own rules."
+    }
+  ]
+}
