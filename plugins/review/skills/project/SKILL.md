@@ -1,7 +1,6 @@
 ---
-description: Review a whole project's code for honesty, tests, structure, simplicity, error handling, security and fit with the project's own rules. Read-only. Run it at the end of a roadmap phase, or when the code starts to feel tangled.
+description: Review a whole project's code for honesty, tests, structure, simplicity, error handling, security and fit with the project's own rules. Read-only. Run it at the end of a roadmap phase, or when the code starts to feel tangled. Use only when the project owner explicitly asks for this review, never on your own initiative.
 argument-hint: "[optional area to focus on, such as a folder or a concern]"
-disable-model-invocation: true
 ---
 
 # Whole-project code review

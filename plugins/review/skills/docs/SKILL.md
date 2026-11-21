@@ -1,7 +1,6 @@
 ---
-description: Review a project's documentation for accuracy, duplication, stale content, bloat and findability, against the project's own rules. Read-only. Run it now and then, such as every other roadmap phase, or when the docs start to feel heavy.
+description: Review a project's documentation for accuracy, duplication, stale content, bloat and findability, against the project's own rules. Read-only. Run it now and then, such as every other roadmap phase, or when the docs start to feel heavy. Use only when the project owner explicitly asks for this review, never on your own initiative.
 argument-hint: "[optional file or folder to focus on]"
-disable-model-invocation: true
 ---
 
 # Documentation review
