@@ -1,6 +1,6 @@
 {
   "name": "review",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Whole-project reviews of code quality and of documentation, checked against each project's own rules.",
   "author": { "name": "Invisible Cadence" },
   "repository": "https://github.com/invisible-cadence/claude-plugins",

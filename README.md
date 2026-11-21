@@ -32,7 +32,7 @@ Reviews of a single pull request are not covered here, because Claude Code's bui
 
 The marketplace is this repository, `invisible-cadence/claude-plugins`, and the plugin is `review`.
 
-**In a Claude Code Project (cloud):** open **Project settings > Plugins** and add the plugin from this marketplace. Threads in that Project then have the commands. See [Projects: what threads pick up](https://code.claude.com/docs/en/claude-projects).
+**On your claude.ai account (for cloud sessions and Claude Code Projects):** go to **Customize > Plugins** (https://claude.ai/customize/plugins), choose **Add > Add marketplace**, enter `invisible-cadence/claude-plugins`, then turn on `review`. See [Plugins](https://claude.com/docs/plugins/overview). Threads in a Project then have the commands.
 
 **In Claude Code on your own computer:**
 
@@ -43,7 +43,7 @@ The marketplace is this repository, `invisible-cadence/claude-plugins`, and the 
 
 See [Discover and install plugins](https://code.claude.com/docs/en/discover-plugins).
 
-Declaring the plugin in a project's committed `.claude/settings.json` does not work for cloud sessions: they do not load plugins from repository settings ([Cloud environments: what carries over](https://code.claude.com/docs/en/cloud-environments)). That is why the Project settings route is the one to use in the cloud.
+Declaring the plugin in a project's committed `.claude/settings.json` does not work for cloud sessions: they do not load plugins from repository settings ([Cloud environments: what carries over](https://code.claude.com/docs/en/cloud-environments)). That is why the account route is the one to use in the cloud.
 
 ## How it is built
 
@@ -56,7 +56,9 @@ plugins/review/skills/project/SKILL.md  /review:project
 plugins/review/skills/docs/SKILL.md     /review:docs
 ```
 
-Both commands set `disable-model-invocation: true`, so they run only when someone asks. A full review takes a while and uses a fair share of a plan's allowance, so it should never start on its own.
+A full review takes a while and uses a fair share of a plan's allowance, so it should run only when someone asks for one. Each command's description tells Claude to start it only when the project owner explicitly asks.
+
+The commands do not set `disable-model-invocation: true`, although that would be the stricter guard. In a Claude Code Project, your message goes to a coordinator that starts the review in a new thread on your behalf. That setting counts the coordinator as Claude rather than a person, so it blocks the review and the thread asks you to type the command again.
 
 To check the files after a change:
 
